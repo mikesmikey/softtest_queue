@@ -1,6 +1,4 @@
-// 0. - install jest -> terminal -> npm install --save-dev jest
-//    - npx jest 
-//    - ดูผลลัพธ์
+// 0. import Queue มาใช้ ใน test
 // 1. สร้าง queue ใหม่และทดสอบว่า empty มีค่าเป็น true (ว่าง)
 // 2. สร้าง queue size 1 และ ทดสอบว่าสามารถ enqueue(20) และ dequeue ค่าที่ได้จะได้ 20
 // 3. สร้าง queue size 1 และ ทดสอบว่า enqueue เข้าไป 1 ตัว แล้ว full จะได้ค่า true (เต็ม)
