@@ -32,6 +32,7 @@ class Queue {
     }
     const x = this.data[this.head];
     this.size--;
+    this.tail--;
     this.head++;
     if(this.head == this.max) {
       this.head==0;
