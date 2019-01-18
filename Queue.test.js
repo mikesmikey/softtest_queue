@@ -45,6 +45,11 @@ test("สร้าง queue size 1 และ dequeue เลย จะต้อ�
 
 // 7. หาบัคเอง
 
-test("สร้าง queue ด้วยจำนวนเต็มลบ และต้องได้ค่าเป็น false", ()=>{
-    expect(new Queue(-1)).toBe(false)
+test("สร้าง queue size 2 และ enqueue 1 และ dequeue 1 และ enqueue 2 จะต้องได้ค่า tail เป็น 1", ()=>{
+    const testQueue = new Queue(2);
+
+    testQueue.enqueue(1);
+    testQueue.dequeue();
+    testQueue.enqueue(2);
+    expect(testQueue.tail).toBe(1)
 })
