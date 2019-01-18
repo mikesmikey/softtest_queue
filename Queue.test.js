@@ -45,11 +45,16 @@ test("สร้าง queue size 1 และ dequeue เลย จะต้อ�
 
 // 7. หาบัคเอง
 
-test("สร้าง queue size 2 และ enqueue 1 และ dequeue 1 และ enqueue 2 จะต้องได้ค่า tail เป็น 1", ()=>{
-    const testQueue = new Queue(2);
+test("สร้าง queue size 3 และ enqueue 1 และ enqueue 2 และ enqueue 3 และ dequeue 2 ครั้ง และ enqueue 4 และ dequeue อีกครั้ง และ enqueue 5 และ dequeue จะต้องได้ค่า 4", ()=>{
+    const testQueue = new Queue(3);
 
     testQueue.enqueue(1);
-    testQueue.dequeue();
     testQueue.enqueue(2);
-    expect(testQueue.tail).toBe(1)
+    testQueue.enqueue(3);
+    testQueue.dequeue();
+    testQueue.dequeue();
+    testQueue.enqueue(4);
+    testQueue.dequeue();
+    testQueue.enqueue(5);
+    expect(testQueue.dequeue()).toBe(4)
 })
